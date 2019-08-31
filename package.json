@@ -1,0 +1,31 @@
+{
+  "name": "channels-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasminagavalda/channels-app.git"
+  },
+  "author": "Yasmina Gavaldà",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasminagavalda/channels-app/issues"
+  },
+  "homepage": "https://github.com/yasminagavalda/channels-app#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  }
+}
