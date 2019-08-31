@@ -18,7 +18,8 @@
   "homepage": "https://github.com/yasminagavalda/channels-app#readme",
   "dependencies": {
     "dotenv": "^8.1.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.6.11"
   },
   "devDependencies": {
     "eslint": "^6.3.0",
