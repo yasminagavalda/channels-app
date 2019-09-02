@@ -15,4 +15,11 @@ const ChannelSchema = new Schema(
   { collection }
 );
 
+const deepPopulate = function(next) {
+  this.populate('subchannels').populate('contents');
+  next();
+};
+
+ChannelSchema.pre('find', deepPopulate).pre('findOne', deepPopulate);
+
 module.exports = mongoose.model('Channel', ChannelSchema);

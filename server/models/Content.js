@@ -5,7 +5,8 @@ const collection = 'contents';
 
 const ContentSchema = new Schema(
   {
-    content: { type: Buffer, required: true },
+    type: { type: String, required: true },
+    content: { type: String, required: true },
     metadata: { type: Object, required: true },
     rating: { type: Number, required: true }
   },
