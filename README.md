@@ -2,9 +2,11 @@
 
 This repository contains an API that provides DDBB Channels and Contents.
 
-If you download this folder, do first npm install.
+If you download this folder, do first `npm install`.
 
-To run this code do npm start.
+To run this code do `npm start`.
+
+To run unit tests do `npm run test`
 
 There are three different enpoints depending if you want information about channels or contents:
 
