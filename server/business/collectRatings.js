@@ -53,11 +53,29 @@ const collectChannelsRatings = channels => {
 
 const sortChannelsByRating = channels => channels.sort((a, b) => b.ratingAverage - a.ratingAverage);
 
-const exportChannelRatingsToCsv = async () => {
+const makeDataRow = ({ title, ratingAverage }) => [title, ratingAverage];
+
+const arrayToCsvString = channelsRatings => {
+  const headers = ['Channel Title', 'Average Rating'];
+  const data = [headers];
+  channelsRatings.forEach(channel => data.push(makeDataRow(channel)));
+  let csvString;
+  data.forEach(row => {
+    csvString = `${csvString}${row.join(';')}\n`;
+  });
+  return csvString;
+};
+
+const exportChannelRatingsToCsv = async (req, res) => {
+  console.log('Exporting channels ratings average to csv...');
   const channels = await findChannels();
   const channelsRatings = collectChannelsRatings(channels);
   const channelsRatingsAverage = calculateChannelsRatingsAverage(channelsRatings);
   const channelsRatingsSorted = sortChannelsByRating(channelsRatingsAverage);
+  const str = arrayToCsvString(channelsRatingsSorted);
+  res.attachment('channels-ratings.csv');
+  res.send(str);
+  console.log('Channels rating sent successfully!');
 };
 
 module.exports = {

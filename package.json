@@ -5,8 +5,7 @@
   "main": "server/app.js",
   "scripts": {
     "start": "node .",
-    "test": "jest",
-    "ratings": "node -e 'require(\"./server/business/collectRatings\").exportChannelRatingsToCsv()'"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
