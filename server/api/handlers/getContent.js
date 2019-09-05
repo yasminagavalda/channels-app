@@ -6,6 +6,7 @@ const getContent = async (req, res) => {
     const content = await Content.findById(id);
     res.json({ Content: content });
   } catch (err) {
+    console.error(`Error searching content: ${err}`);
     if (err.name === 'CastError') {
       return res.json({ Error: 'Content not found' });
     }

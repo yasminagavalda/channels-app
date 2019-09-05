@@ -16,6 +16,11 @@ There are three different enpoints depending if you want information about chann
 
   The channels endpoint returns a list with all channels
 
+  Each channel can belong to multiple groups. You can add an optional groups filter to this endpoint adding groups to filter as query params.
+  You can add as many groups as you want and you will a list with channels that contain at least one of the filter groups:
+
+  /api/channels?group={group}&group={group}
+
 - GET /api/channel/{id}
 
   The channel endpoint returns the channel information by id
@@ -27,6 +32,7 @@ There are three different enpoints depending if you want information about chann
 Examples of use:
 
 - http://localhost:3000/api/channels
+- http://localhost:3000/api/channels?group=a&group=c
 - http://localhost:3000/api/channel/5d6a78bab216a7359c66cfa5
 - http://localhost:3000/api/content/5d6a768416e7da4b683b4f2c
 

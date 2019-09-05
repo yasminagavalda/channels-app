@@ -6,6 +6,7 @@ const getChannel = async (req, res) => {
     const channel = await Channel.findOne({ _id: id });
     res.json({ Channel: channel });
   } catch (err) {
+    console.error(`Error searching channel: ${err}`);
     if (err.name === 'CastError') {
       return res.json({ Error: 'Channel not found' });
     }

@@ -10,7 +10,8 @@ const ChannelSchema = new Schema(
     language: { type: String, required: true },
     picture: { type: String, required: true },
     subchannels: [{ type: ObjectId, ref: 'Channel' }],
-    contents: [{ type: ObjectId, ref: 'Content' }]
+    contents: [{ type: ObjectId, ref: 'Content' }],
+    groups: [{ type: String }]
   },
   { collection }
 );
