@@ -17,7 +17,7 @@ There are three different enpoints depending if you want information about chann
   The channels endpoint returns a list with all channels
 
   Each channel can belong to multiple groups. You can add an optional groups filter to this endpoint adding groups to filter as query params.
-  You can add as many groups as you want and you will a list with channels that contain at least one of the filter groups:
+  You can add as many groups as you want and you will get a list with channels that contain at least one of the filter groups:
 
   /api/channels?group={group}&group={group}
 
